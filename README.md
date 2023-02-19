@@ -49,8 +49,8 @@ see the function signature below to get more details on function parameters.
 
 | Parameter | Data Type        | Description                                               | More Details                                                                                                                                                               |
 |-----------|------------------|-----------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| query     | string           | twitter search query as per https://twitter.com/search?q= | it can be a user mention like: `@user` or hashtag like `#tag` or a word like `text` or a complex query joined by  `AND`, `OR`, or statement enclosed in `()`               |
-| limit     | int              | number of tweets you want to scrape                       | depending on number of tweets, the script will take time to execute. example: 100 tweets will be collected in 1s, where as 10,000 might take 5min and 1,00,000 may take 1h |
+| query     | string           | twitter search query as per https://twitter.com/search?q= | it can be a user mention like: `@user` or hashtag like `#tag` or a word like `text` or a complex query joined by  `AND`, `OR`, or statement enclosed in `()`. Explore twitter.com/search-advanced to know more. |
+| limit     | int              | number of tweets you want to scrape                       | depending on number of tweets, the script will take time to execute. example: 100 tweets will be collected in 1s, where as 10,000 might take 5min and 1,00,000 may take 1h. |
 | return    | pandas dataframe | a pandas dataframe with the tweets                        | as of now, the following data fields are collected: `id`, `date`, `username`, `content`, `view_count`, `like_count`, `reply_count`, `retweet_count`, `quote_Count`, `url`  |
 
 ---
@@ -69,7 +69,10 @@ For example:
 I am sharing a few use-cases below.
 
 ## sample use case:
-TODO
+Here is a sample word cloud generated using `limit: 10,000` and `query: ISRO (#SSLVD2 OR #ISRO)` at resolution: `width, height: 1080, 720` during the SSLV-D2 Launch on 10th Feb, 2023. You can clearly see how Twitter was looking that day during the Launch, in just one snapshot!
+
+![ISRO SLVD2 Launch](https://user-images.githubusercontent.com/34891206/219942847-9329f7b1-7913-4d23-9222-a0553f50d9ff.png)
+
 
 ## usage:
 Here is a sample usage:
